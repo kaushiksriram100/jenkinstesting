@@ -6,12 +6,12 @@ pipeline {
     stages {
         stage ('Speak') {
             steps {
-                sh 'cat /tmp/2; echo "fail"; exit 2'
+                sh 'echo "sing" > /tmp/1'
             }
         }
         stage ('Sing') {
             steps {
-                echo "Hello, singing!"
+                sh 'cat /tmp/1; echo "fail"; exit 2'
             }
         }
         stage ('Dancing') {
