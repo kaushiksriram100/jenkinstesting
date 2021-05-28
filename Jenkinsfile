@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage ('Speak') {
             steps {
-                sh 'echo "hihi" > /tmp/2; echo "fail"; exit 2'
+                sh 'cat /tmp/2; echo "fail"; exit 2'
             }
         }
         stage ('Sing') {
